@@ -45,14 +45,15 @@ We will see some raw data in hex and its values
 
 We can jump to our important section. <br>    
     
-    1- Time Date Stamp:
+    
+1- Time Date Stamp:
        this is time of compilation of this sample
        ![](/pics/time_stamp.png)
        Note: Delphi compiler will always have a timestamp of 1992 
     
-    2- Virtual size & Size of raw data: 
+2- Virtual size & Size of raw data: 
        in IMAGE_SECTION_HEADER.text which has information that can ber read into the binary at runtime, in this section we will care about the virtual size which represents the actual size of data on the disk when the binary is running and size of raw data and compare between these values if these values closing to each other so we can conclude that this malware is unpacked.<br>
-    3- The last part we will look at is tool, this section contain all Windows APIs called by binary 
+3- The last part we will look at is tool, this section contain all Windows APIs called by binary 
     ![](/pics/import_table.png)
     and with these APIs we can know some of function that this sample may be do like this API:
     ![](/pics/url_to_file.png)
